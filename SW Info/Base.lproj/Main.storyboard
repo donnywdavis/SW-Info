@@ -4,9 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SWCrawlBody.ttf">
+            <string>SW-Crawl-Body</string>
             <string>SW-Crawl-Body</string>
         </mutableArray>
         <mutableArray key="SWCrawlTitle.ttf">
@@ -104,7 +106,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="sMF-Jc-vnw" kind="show" identifier="FilmsSegue" id="d9l-DC-XLV"/>
+                                            <segue destination="sMF-Jc-vnw" kind="presentation" identifier="FilmsSegue" modalTransitionStyle="flipHorizontal" id="d9l-DC-XLV"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -118,22 +120,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qz1-yR-avK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="1086"/>
+            <point key="canvasLocation" x="1054" y="423"/>
         </scene>
-        <!--View Controller-->
+        <!--Films View Controller-->
         <scene sceneID="QC3-dw-FCY">
             <objects>
-                <viewController id="sMF-Jc-vnw" sceneMemberID="viewController">
+                <viewController id="sMF-Jc-vnw" customClass="FilmsViewController" customModule="SW_Info" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lcn-Ou-oyM"/>
                         <viewControllerLayoutGuide type="bottom" id="5dV-xG-SUx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="inQ-SQ-Aiv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-background" translatesAutoresizingMaskIntoConstraints="NO" id="Ph5-Jx-inc">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="films" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="slN-Uc-qnl">
                                 <rect key="frame" x="20" y="8" width="560" height="60"/>
@@ -144,43 +146,60 @@
                                 <color key="textColor" red="0.8980392157" green="0.69411764710000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6D4-Gj-EZG">
-                                <rect key="frame" x="0.0" y="76" width="600" height="428"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6D4-Gj-EZG">
+                                <rect key="frame" x="0.0" y="76" width="600" height="524"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="mR8-fi-BtZ">
+                                    <rect key="frame" x="0.0" y="128" width="600" height="37"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" red="0.8980392157" green="0.69411764710000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                </activityIndicatorView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FilmCell" rowHeight="106" id="CqG-8z-MBE">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="106"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FilmCell" rowHeight="100" id="CqG-8z-MBE" customClass="FilmsTableViewCell" customModule="SW_Info" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CqG-8z-MBE" id="9W9-mz-NMt">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="106"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G70-JZ-B53">
-                                                    <rect key="frame" x="257" y="8" width="86" height="45"/>
+                                                    <rect key="frame" x="30" y="8" width="540" height="45"/>
                                                     <fontDescription key="fontDescription" name="SW-Crawl-Title" family="SW Crawl Title" pointSize="40"/>
                                                     <color key="textColor" red="0.8980392157" green="0.69411764710000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A New Hope" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBj-tK-X3S">
-                                                    <rect key="frame" x="235" y="61" width="131" height="28"/>
+                                                    <rect key="frame" x="30" y="53" width="540" height="28"/>
                                                     <fontDescription key="fontDescription" name="SW-Crawl-Body" family="SW Crawl Body" pointSize="25"/>
                                                     <color key="textColor" red="0.8980392157" green="0.69411764710000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="OBj-tK-X3S" firstAttribute="top" secondItem="G70-JZ-B53" secondAttribute="bottom" constant="8" id="LUK-a6-g1g"/>
+                                                <constraint firstItem="OBj-tK-X3S" firstAttribute="centerX" secondItem="9W9-mz-NMt" secondAttribute="centerX" id="IWk-UF-OUb"/>
+                                                <constraint firstItem="G70-JZ-B53" firstAttribute="width" secondItem="9W9-mz-NMt" secondAttribute="width" multiplier="0.9" id="OHC-th-vxc"/>
                                                 <constraint firstItem="G70-JZ-B53" firstAttribute="top" secondItem="9W9-mz-NMt" secondAttribute="topMargin" id="OO5-Dt-aep"/>
+                                                <constraint firstItem="OBj-tK-X3S" firstAttribute="top" secondItem="G70-JZ-B53" secondAttribute="bottom" id="ihn-qG-ARE"/>
                                                 <constraint firstItem="G70-JZ-B53" firstAttribute="centerX" secondItem="9W9-mz-NMt" secondAttribute="centerX" id="jdp-jR-0hH"/>
-                                                <constraint firstItem="OBj-tK-X3S" firstAttribute="centerX" secondItem="9W9-mz-NMt" secondAttribute="centerX" id="pf2-Px-3rJ"/>
+                                                <constraint firstItem="OBj-tK-X3S" firstAttribute="width" secondItem="9W9-mz-NMt" secondAttribute="width" multiplier="0.9" id="jfN-28-sEL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="episodeLabel" destination="G70-JZ-B53" id="Gxt-ZA-5nm"/>
+                                            <outlet property="titleLabel" destination="OBj-tK-X3S" id="DKw-fY-Vn7"/>
+                                            <segue destination="gmP-kt-aag" kind="show" identifier="CrawlSegue" id="mSB-gu-IUr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sMF-Jc-vnw" id="dOX-0M-5MS"/>
+                                    <outlet property="delegate" destination="sMF-Jc-vnw" id="iZm-w6-eqY"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6D4-Gj-EZG" firstAttribute="top" secondItem="slN-Uc-qnl" secondAttribute="bottom" constant="8" id="0Q3-zN-8WM"/>
                             <constraint firstItem="5dV-xG-SUx" firstAttribute="top" secondItem="Ph5-Jx-inc" secondAttribute="bottom" id="2NN-l8-eOc"/>
@@ -195,11 +214,76 @@
                             <constraint firstItem="slN-Uc-qnl" firstAttribute="trailing" secondItem="inQ-SQ-Aiv" secondAttribute="trailingMargin" id="czn-qt-NJT"/>
                             <constraint firstItem="Ph5-Jx-inc" firstAttribute="leading" secondItem="inQ-SQ-Aiv" secondAttribute="leading" id="vxY-Jq-Ofx"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="uch-2z-me7" appends="YES" id="fWC-8b-e2T"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="mR8-fi-BtZ" id="Wsn-Z6-mjp"/>
+                        <outlet property="tableView" destination="6D4-Gj-EZG" id="Bqu-xk-gd4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKp-Ed-iD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="uch-2z-me7">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="screenEdgeGestureAction:" destination="sMF-Jc-vnw" id="K5f-XS-sSR"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1131" y="375"/>
+            <point key="canvasLocation" x="1914" y="95"/>
+        </scene>
+        <!--Film Crawl View Controller-->
+        <scene sceneID="OyB-Sz-qrW">
+            <objects>
+                <viewController storyboardIdentifier="FilmCrawlViewController" id="gmP-kt-aag" customClass="FilmCrawlViewController" customModule="SW_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EVV-uS-FLX"/>
+                        <viewControllerLayoutGuide type="bottom" id="15h-lx-iju"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H5W-0y-Ff7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-background" translatesAutoresizingMaskIntoConstraints="NO" id="XqA-on-JLU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="j9d-rZ-Ypw" appends="YES" id="Wp1-WS-yqg"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-Ny-mRp">
+                                <rect key="frame" x="20" y="8" width="560" height="28"/>
+                                <fontDescription key="fontDescription" name="SW-Crawl-Body" family="SW Crawl Body" pointSize="25"/>
+                                <color key="textColor" red="0.8980392157" green="0.69411764710000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XqA-on-JLU" firstAttribute="top" secondItem="EVV-uS-FLX" secondAttribute="bottom" id="2c2-ZA-AXC"/>
+                            <constraint firstItem="15h-lx-iju" firstAttribute="top" secondItem="XqA-on-JLU" secondAttribute="bottom" id="4Ju-JJ-WdQ"/>
+                            <constraint firstItem="EKa-Ny-mRp" firstAttribute="top" secondItem="EVV-uS-FLX" secondAttribute="bottom" constant="8" id="A5H-wx-rPq"/>
+                            <constraint firstAttribute="trailing" secondItem="XqA-on-JLU" secondAttribute="trailing" id="BnL-5H-cRM"/>
+                            <constraint firstItem="EKa-Ny-mRp" firstAttribute="leading" secondItem="H5W-0y-Ff7" secondAttribute="leadingMargin" id="Gza-hk-c4F"/>
+                            <constraint firstItem="EKa-Ny-mRp" firstAttribute="trailing" secondItem="H5W-0y-Ff7" secondAttribute="trailingMargin" id="Vv8-sp-tmV"/>
+                            <constraint firstItem="XqA-on-JLU" firstAttribute="leading" secondItem="H5W-0y-Ff7" secondAttribute="leading" id="w3k-Hr-eSO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="crawlLabel" destination="EKa-Ny-mRp" id="TDW-Da-Ial"/>
+                        <outlet property="imageView" destination="XqA-on-JLU" id="nxH-K3-PLD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atM-8V-gfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="j9d-rZ-Ypw">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="screenEdgelGestureAction:" destination="gmP-kt-aag" id="Og6-w1-48O"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2693" y="95"/>
         </scene>
     </scenes>
     <resources>

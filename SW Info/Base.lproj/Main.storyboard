@@ -253,7 +253,7 @@
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-Ny-mRp">
-                                <rect key="frame" x="20" y="8" width="560" height="28"/>
+                                <rect key="frame" x="20" y="8" width="560" height="592"/>
                                 <fontDescription key="fontDescription" name="SW-Crawl-Body" family="SW Crawl Body" pointSize="25"/>
                                 <color key="textColor" red="0.8980392157" green="0.69411764710000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -263,6 +263,7 @@
                         <constraints>
                             <constraint firstItem="XqA-on-JLU" firstAttribute="top" secondItem="EVV-uS-FLX" secondAttribute="bottom" id="2c2-ZA-AXC"/>
                             <constraint firstItem="15h-lx-iju" firstAttribute="top" secondItem="XqA-on-JLU" secondAttribute="bottom" id="4Ju-JJ-WdQ"/>
+                            <constraint firstItem="15h-lx-iju" firstAttribute="top" secondItem="EKa-Ny-mRp" secondAttribute="bottom" id="7qZ-gl-CYn"/>
                             <constraint firstItem="EKa-Ny-mRp" firstAttribute="top" secondItem="EVV-uS-FLX" secondAttribute="bottom" constant="8" id="A5H-wx-rPq"/>
                             <constraint firstAttribute="trailing" secondItem="XqA-on-JLU" secondAttribute="trailing" id="BnL-5H-cRM"/>
                             <constraint firstItem="EKa-Ny-mRp" firstAttribute="leading" secondItem="H5W-0y-Ff7" secondAttribute="leadingMargin" id="Gza-hk-c4F"/>

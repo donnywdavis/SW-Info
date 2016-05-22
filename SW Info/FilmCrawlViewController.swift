@@ -23,6 +23,12 @@ class FilmCrawlViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIView.animateWithDuration(5.0, delay: 0.0, options: [], animations: { 
+            var labelFrame = self.crawlLabel.frame
+            labelFrame.origin.y += labelFrame.size.height
+            self.crawlLabel.frame = labelFrame
+            }, completion: nil)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -34,12 +40,13 @@ class FilmCrawlViewController: UIViewController {
         
         crawlLabel.text = film.openingCrawl
         
-        UIView.animateWithDuration(2.0, delay: 0.0, options: [], animations: {
-            var labelFrame = self.imageView.frame
+        crawlLabel.frame.origin.y -= self.imageView.frame.size.height
+        
+        UIView.animateWithDuration(7.0, delay: 0.5, options: [], animations: {
+            var labelFrame = self.crawlLabel.frame
             labelFrame.origin.y -= labelFrame.size.height
             self.crawlLabel.frame = labelFrame
             }, completion: nil)
-//        crawlLabel.frame.origin.y -= view.frame.size.height
     }
 
     override func didReceiveMemoryWarning() {

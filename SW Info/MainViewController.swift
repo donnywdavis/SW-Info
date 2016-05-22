@@ -40,9 +40,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("EndpointsCell", forIndexPath: indexPath)
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("EndpointCell", forIndexPath: indexPath) as? MainTableViewCell else {
+            let alert = UIAlertController(title: "Error", message: "Error loading table cell", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(okAction)
+            presentViewController(alert, animated: true, completion: nil)
+            return UITableViewCell()
+        }
         
-        
+        cell.setUpCell(endpoints[indexPath.row])
         
         return cell
     }

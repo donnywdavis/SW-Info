@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="space-background" translatesAutoresizingMaskIntoConstraints="NO" id="XSc-Io-eXc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-background" translatesAutoresizingMaskIntoConstraints="NO" id="XSc-Io-eXc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="star wars api" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYB-pn-DP8">
@@ -37,8 +37,12 @@
                         <constraints>
                             <constraint firstItem="TYB-pn-DP8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="0S8-E2-1zW"/>
                             <constraint firstItem="TYB-pn-DP8" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="A5Q-fZ-Ny6"/>
+                            <constraint firstItem="XSc-Io-eXc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Eid-8a-svd"/>
                             <constraint firstItem="TYB-pn-DP8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jTE-et-oR4"/>
+                            <constraint firstItem="XSc-Io-eXc" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nPt-Ck-Z4Q"/>
                             <constraint firstItem="TYB-pn-DP8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qNb-Cw-VOL"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="XSc-Io-eXc" secondAttribute="bottom" id="sYJ-bp-LjF"/>
+                            <constraint firstAttribute="trailing" secondItem="XSc-Io-eXc" secondAttribute="trailing" id="v9E-9w-EWk"/>
                         </constraints>
                     </view>
                 </viewController>

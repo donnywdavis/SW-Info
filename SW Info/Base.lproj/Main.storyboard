@@ -6,8 +6,8 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="SWCrawlTitle.ttf">
-            <string>SW-Crawl-Title</string>
+        <mutableArray key="SWCrawlBody.ttf">
+            <string>SW-Crawl-Body</string>
         </mutableArray>
         <mutableArray key="Starjhol.ttf">
             <string>StarJediHollow</string>
@@ -29,12 +29,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-background" translatesAutoresizingMaskIntoConstraints="NO" id="8hq-Re-BkV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="star wars api" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lK-SK-krJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="star wars api" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="8lK-SK-krJ">
                                 <rect key="frame" x="20" y="28" width="560" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8ve-94-tY3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="StarJediHollow" family="Star Jedi Hollow" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="StarJediHollow" family="Star Jedi Hollow" pointSize="40"/>
                                 <color key="textColor" red="0.89803921568627454" green="0.69411764705882351" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -49,9 +49,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode IV: A New Hope" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCt-E0-xLE">
-                                                    <rect key="frame" x="166" y="12" width="268" height="56"/>
-                                                    <fontDescription key="fontDescription" name="SW-Crawl-Title" family="SW Crawl Title" pointSize="50"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="VCt-E0-xLE">
+                                                    <rect key="frame" x="207" y="17.5" width="186" height="45"/>
+                                                    <fontDescription key="fontDescription" name="SW-Crawl-Body" family="SW Crawl Body" pointSize="40"/>
                                                     <color key="textColor" red="0.8980392157" green="0.69411764710000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

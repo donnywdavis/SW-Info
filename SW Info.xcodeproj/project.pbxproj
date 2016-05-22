@@ -43,6 +43,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410514B71CF1D59500AE0C16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				410514B41CF1CD7F00AE0C16 /* Starjhol.ttf */,
+				410514B51CF1D08300AE0C16 /* SWCrawlTitle.ttf */,
+				410514B61CF1D09600AE0C16 /* SWCrawlBody.ttf */,
+				41BEF8661CF1552100F7F72A /* Assets.xcassets */,
+				41BEF86B1CF1552100F7F72A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		410514B81CF1D5A300AE0C16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41BEF8631CF1552100F7F72A /* Main.storyboard */,
+				41BEF8681CF1552100F7F72A /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		410514B91CF1D5AD00AE0C16 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				41BEF85F1CF1552100F7F72A /* AppDelegate.swift */,
+				41BEF8611CF1552100F7F72A /* MainViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		41BEF8531CF1552100F7F72A = {
 			isa = PBXGroup;
 			children = (
@@ -64,15 +94,9 @@
 		41BEF85E1CF1552100F7F72A /* SW Info */ = {
 			isa = PBXGroup;
 			children = (
-				410514B41CF1CD7F00AE0C16 /* Starjhol.ttf */,
-				410514B51CF1D08300AE0C16 /* SWCrawlTitle.ttf */,
-				410514B61CF1D09600AE0C16 /* SWCrawlBody.ttf */,
-				41BEF85F1CF1552100F7F72A /* AppDelegate.swift */,
-				41BEF8611CF1552100F7F72A /* MainViewController.swift */,
-				41BEF8631CF1552100F7F72A /* Main.storyboard */,
-				41BEF8661CF1552100F7F72A /* Assets.xcassets */,
-				41BEF8681CF1552100F7F72A /* LaunchScreen.storyboard */,
-				41BEF86B1CF1552100F7F72A /* Info.plist */,
+				410514B91CF1D5AD00AE0C16 /* Controllers */,
+				410514B81CF1D5A300AE0C16 /* Views */,
+				410514B71CF1D59500AE0C16 /* Supporting Files */,
 			);
 			path = "SW Info";
 			sourceTree = "<group>";

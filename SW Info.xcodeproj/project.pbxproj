@@ -18,6 +18,9 @@
 /* Begin PBXFileReference section */
 		03B31A42C369C8B57BDB5054 /* Pods-SW Info.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SW Info.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SW Info/Pods-SW Info.debug.xcconfig"; sourceTree = "<group>"; };
 		34B937253DAE14819A838C10 /* Pods_SW_Info.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SW_Info.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		410514B41CF1CD7F00AE0C16 /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
+		410514B51CF1D08300AE0C16 /* SWCrawlTitle.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SWCrawlTitle.ttf; sourceTree = "<group>"; };
+		410514B61CF1D09600AE0C16 /* SWCrawlBody.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SWCrawlBody.ttf; sourceTree = "<group>"; };
 		41BEF85C1CF1552100F7F72A /* SW Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SW Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BEF85F1CF1552100F7F72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41BEF8611CF1552100F7F72A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 		41BEF85E1CF1552100F7F72A /* SW Info */ = {
 			isa = PBXGroup;
 			children = (
+				410514B41CF1CD7F00AE0C16 /* Starjhol.ttf */,
+				410514B51CF1D08300AE0C16 /* SWCrawlTitle.ttf */,
+				410514B61CF1D09600AE0C16 /* SWCrawlBody.ttf */,
 				41BEF85F1CF1552100F7F72A /* AppDelegate.swift */,
 				41BEF8611CF1552100F7F72A /* MainViewController.swift */,
 				41BEF8631CF1552100F7F72A /* Main.storyboard */,
